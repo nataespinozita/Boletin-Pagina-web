@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinación - Gestión de Notas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="D-ALUMNADO.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="top-bar">
+        <div class="logo-container">
+            <img src="/BOLETIN/LOGO2-fotor-20241110171940.png" alt="Logo" class="logo">
+        </div>
+        <div class="title">Sistema de Gestión de Notas</div>
+        <div class="account-container">
+            <a href="perfil.html"> <!-- Enlace a la página de perfil -->
+                <img src="/BOLETIN/user.png" alt="Cuenta" class="user-icon">
+            </a>
+            <span class="account-name">Coordinación</span>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <div class="main-container">
+        <!-- Panel de Notas -->
+        <div class="grades-container">
+            <h2>Ingresar Notas</h2>
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, '7mo3ra')">7mo 3ra</button>
+                <button class="tablinks" onclick="openTab(event, '7mo2da')">7mo 2da</button>
+                <button class="tablinks" onclick="openTab(event, '7mo1ra')">7mo 1ra</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="7mo3ra" class="tabcontent">
+                <h3>7mo 3ra</h3>
+                  <!-- Contenedor de las notas -->
+        <div class="grades-container">
+            <!-- Tabla de calificaciones para 7mo 3ra -->
+            <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+                <tbody>
+                    <!-- Fila con el nombre del alumno y curso -->
+                    <tr class="row0">
+                        <td class="column0 style1 s">Apellido y Nombre:</td>
+                        <td class="column1 style2 s" colspan="5">
+                            <select id="nombreSelect" onchange="cambiarAlumno()">
+                                <!-- Opciones de alumnos -->
+                                <option value="0">Espinoza Natalia</option>
+                                <option value="1">Licantica Cristian</option>
+                                <option value="2">Millanao Joaquin</option>
+                            </select>
+                            <!-- Botón para agregar nuevos nombres -->
+                            <button onclick="agregarNombre()">Agregar Nombre</button>
+                            <input type="text" id="nuevoNombre" placeholder="Agregar nuevo nombre">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="column6 style3 s">Curso:</td>
+                        <td class="column2 style5 s" colspan="7">7° 3° Técnica</td>
+                    </tr>
+
+                    <!-- Fila con los nombres de las materias -->
+                    <tr class="row1">
+                        <td class="column0 style4 s" colspan="2">Ciclo Superior de la ESO</td>
+                        <td class="column2 style5 s">Matemática</td>
+                        <td class="column3 style5 s">Inglés técnico</td>
+                        <td class="column4 style5 s">Marco jurídico </td>
+                        <td class="column5 style5 s">TÉCNICA: Asistencia 2</td>
+                        <td class="column6 style5 s">TÉCNICA: Autogestión</td>
+                        <td class="column7 style5 s">TÉCNICA: Hardware 4</td>
+                        <td class="column8 style5 s">TÉCNICA: Prácticas Profesionalizantes 2</td>
+                        <td class="column9 style5 s">TÉCNICA: Programación</td>
+                        <td class="column10 style5 s">TÉCNICA: Redes 3</td>
+                        <td class="column11 style5 s">EDI: Arduino 3</td>
+                    </tr>
+
+                    <!-- Fila de notas para el 1er cuatrimestre -->
+                    <tr class="row2">
+                        <td class="column0 style6 s" rowspan="3">1° Cuatrimestre</td>
+                        <td class="column1 style7 s">1° Informe</td>
+                        <td class="column2 style8"><input type="text" name="matematica_1_1"></td>
+                        <td class="column3 style8"><input type="text" name="ingles_1_1"></td>
+                        <td class="column4 style8"><input type="text" name="marco_1_1"></td>
+                        <td class="column5 style8"><input type="text" name="tecnica_asistencia_1_1"></td>
+                        <td class="column6 style8"><input type="text" name="tecnica_autogestion_1_1"></td>
+                        <td class="column7 style8"><input type="text" name="tecnica_hardware_1_1"></td>
+                        <td class="column8 style8"><input type="text" name="tecnica_practicas_1_1"></td>
+                        <td class="column9 style8"><input type="text" name="tecnica_programacion_1_1"></td>
+                        <td class="column10 style8"><input type="text" name="tecnica_redes_1_1"></td>
+                        <td class="column11 style8"><input type="text" name="edi_arduino_1_1"></td>
+                    </tr>
+
+                    <!-- Fila de notas para el 2° informe del 1er cuatrimestre -->
+                    <tr>
+                        <td class="column1 style7 s">2° Informe</td>
+                        <td class="column2 style8"><input type="text" name="matematica_1_2"></td>
+                        <td class="column3 style8"><input type="text" name="ingles_1_2"></td>
+                        <td class="column4 style8"><input type="text" name="marco_1_2"></td>
+                        <td class="column5 style8"><input type="text" name="tecnica_asistencia_1_2"></td>
+                        <td class="column6 style8"><input type="text" name="tecnica_autogestion_1_2"></td>
+                        <td class="column7 style8"><input type="text" name="tecnica_hardware_1_2"></td>
+                        <td class="column8 style8"><input type="text" name="tecnica_practicas_1_2"></td>
+                        <td class="column9 style8"><input type="text" name="tecnica_programacion_1_2"></td>
+                        <td class="column10 style8"><input type="text" name="tecnica_redes_1_2"></td>
+                        <td class="column11 style8"><input type="text" name="edi_arduino_1_2"></td>
+                    </tr>
+
+                    <!-- Fila de nota final para el 1er cuatrimestre -->
+                    <tr>
+                        <td class="column1 style7 s">NOTA</td>
+                        <td class="column2 style8"><input type="text" name="matematica_1_nota"></td>
+                        <td class="column3 style8"><input type="text" name="ingles_1_nota"></td>
+                        <td class="column4 style8"><input type="text" name="marco_1_nota"></td>
+                        <td class="column5 style8"><input type="text" name="tecnica_asistencia_1_nota"></td>
+                        <td class="column6 style8"><input type="text" name="tecnica_autogestion_1_nota"></td>
+                        <td class="column7 style8"><input type="text" name="tecnica_hardware_1_nota"></td>
+                        <td class="column8 style8"><input type="text" name="tecnica_practicas_1_nota"></td>
+                        <td class="column9 style8"><input type="text" name="tecnica_programacion_1_nota"></td>
+                        <td class="column10 style8"><input type="text" name="tecnica_redes_1_nota"></td>
+                        <td class="column11 style8"><input type="text" name="edi_arduino_1_nota"></td>
+                    </tr>
+
+                    <!-- Fila de notas para el 2do cuatrimestre -->
+                    <tr class="row2">
+                        <td class="column0 style6 s" rowspan="3">2° Cuatrimestre</td>
+                        <td class="column1 style7 s">1° Informe</td>
+                        <td class="column2 style8"><input type="text" name="matematica_2_1"></td>
+                        <td class="column3 style8"><input type="text" name="ingles_2_1"></td>
+                        <td class="column4 style8"><input type="text" name="marco_2_1"></td>
+                        <td class="column5 style8"><input type="text" name="tecnica_asistencia_2_1"></td>
+                        <td class="column6 style8"><input type="text" name="tecnica_autogestion_2_1"></td>
+                        <td class="column7 style8"><input type="text" name="tecnica_hardware_2_1"></td>
+                        <td class="column8 style8"><input type="text" name="tecnica_practicas_2_1"></td>
+                        <td class="column9 style8"><input type="text" name="tecnica_programacion_2_1"></td>
+                        <td class="column10 style8"><input type="text" name="tecnica_redes_2_1"></td>
+                        <td class="column11 style8"><input type="text" name="edi_arduino_2_1"></td>
+                    </tr>
+
+                    <!-- Fila de notas para el 2° informe del 2do cuatrimestre -->
+                    <tr>
+                        <td class="column1 style7 s">2° Informe</td>
+                        <td class="column2 style8"><input type="text" name="matematica_2_2"></td>
+                        <td class="column3 style8"><input type="text" name="ingles_2_2"></td>
+                        <td class="column4 style8"><input type="text" name="marco_2_2"></td>
+                        <td class="column5 style8"><input type="text" name="tecnica_asistencia_2_2"></td>
+                        <td class="column6 style8"><input type="text" name="tecnica_autogestion_2_2"></td>
+                        <td class="column7 style8"><input type="text" name="tecnica_hardware_2_2"></td>
+                        <td class="column8 style8"><input type="text" name="tecnica_practicas_2_2"></td>
+                        <td class="column9 style8"><input type="text" name="tecnica_programacion_2_2"></td>
+                        <td class="column10 style8"><input type="text" name="tecnica_redes_2_2"></td>
+                        <td class="column11 style8"><input type="text" name="edi_arduino_2_2"></td>
+                    </tr>
+
+                    <!-- Fila de nota final para el 2do cuatrimestre -->
+                    <tr>
+                        <td class="column1 style7 s">NOTA</td>
+                        <td class="column2 style8"><input type="text" name="matematica_2_nota"></td>
+                        <td class="column3 style8"><input type="text" name="ingles_2_nota"></td>
+                        <td class="column4 style8"><input type="text" name="marco_2_nota"></td>
+                        <td class="column5 style8"><input type="text" name="tecnica_asistencia_2_nota"></td>
+                        <td class="column6 style8"><input type="text" name="tecnica_autogestion_2_nota"></td>
+                        <td class="column7 style8"><input type="text" name="tecnica_hardware_2_nota"></td>
+                        <td class="column8 style8"><input type="text" name="tecnica_practicas_2_nota"></td>
+                        <td class="column9 style8"><input type="text" name="tecnica_programacion_2_nota"></td>
+                        <td class="column10 style8"><input type="text" name="tecnica_redes_2_nota"></td>
+                        <td class="column11 style8"><input type="text" name="edi_arduino_2_nota"></td>
+                    </tr>
+                    <tr>
+                        <td class="column1 style7 s">Calificación Anual</td>
+                        <td colspan="11"><input type="text" name="calificacion_anual"></td>
+                    </tr>
+
+                    <!-- Calificación Diciembre / Acreditación Técnica -->
+                    <tr>
+                        <td class="column1 style7 s">Calificación Diciembre / Acreditación Técnica</td>
+                        <td colspan="11"><input type="text" name="calificacion_diciembre"></td>
+                    </tr>
+
+                    <!-- Calificación Febrero / Marzo -->
+                    <tr>
+                        <td class="column1 style7 s">Calificación Febrero / Marzo</td>
+                        <td colspan="11"><input type="text" name="calificacion_febrero_marzo"></td>
+                    </tr>
+
+                    <!-- Calificación Definitiva -->
+                    <tr>
+                        <td class="column1 style7 s">Calificación Definitiva</td>
+                        <td colspan="11"><input type="text" name="calificacion_definitiva"></td>
+                    </tr>
+
+                    <!-- Asistencia -->
+                    <tr>
+                        <td class="column1 style7 s">Asistencia</td>
+                        <td colspan="11">
+                            <label for="asistencia">Porcentaje de inasistencia anual:</label>
+                            <input type="text" name="inasistencia_anual" placeholder="Ej. 6.25%">
+                        </td>
+                    </tr>
+
+                    <!-- Faltas Justificadas e Injustificadas -->
+                    <tr>
+                        <td class="column1 style7 s">Faltas Justificadas</td>
+                        <td colspan="5"><input type="text" name="faltas_justificadas"></td>
+                        <td class="column1 style7 s">Faltas Injustificadas</td>
+                        <td colspan="5"><input type="text" name="faltas_injustificadas"></td>
+                    </tr>
+
+                    <!-- Observaciones -->
+                    <tr>
+                        <td class="column1 style7 s">Observaciones</td>
+                        <td colspan="11"><textarea name="observaciones" rows="2" placeholder="Ingrese observaciones aquí..."></textarea></td>
+                    </tr>
+
+                    <!-- Botón para guardar cambios -->
+                    <tr>
+                        <td colspan="12">
+                            <button type="button" class="save-btn" onclick="guardarCambios()">Guardar Cambios</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<!-- Aquí se incluye el código de la tabla de notas -->
+                <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+                    <tbody>
+                        <!-- Aquí va el contenido de la tabla proporcionado -->
+                         
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Se pueden añadir más secciones de notas (como 8vo1ra, 9no2da, etc.) -->
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

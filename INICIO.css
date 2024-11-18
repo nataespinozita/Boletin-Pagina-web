@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fffefe;
+    font-size: 16px;
+    color: #ffffff;
+    padding-top: 70px; /* Espacio para la barra superior */
+}
+
+/* Barra de navegación superior */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url('/BOLETIN/622.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda la barra */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repetirá la imagen */
+    padding: 0.5rem 2rem;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.hidden {
+    transform: translateY(-100%);
+}
+
+.logo-container {
+    width: 8%;
+}
+
+.logo {
+    width: 80%;
+    height: auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar ul li a {
+    color: #fffbfb;
+    background-color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Contenido principal */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.title-container {
+    margin-top: 100px; /* Ajusta este valor para más espacio */
+    text-align: center;
+    font-size: 2rem;
+    color: #5a2a2a;
+}
+
+.title-container h1 {
+    color: #4b0b0b;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Sección de texto con imagen de fondo */
+.texto-con-fondo {
+    background-image: url('/BOLETIN/FONDO.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 300px 1%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.texto-con-fondo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.texto-con-fondo h1 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Pie de página */
+footer {
+    background-color: #4e0c0c;
+    color: #ffffff;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 22%;
+    margin-bottom: 1rem;
+}
+
+.footer-column h3 {
+    color: #ebd2d2;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ff6f61;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column; /* Alinea las redes sociales verticalmente como "Recursos para Estudiantes" */
+    gap: 0.5rem;
+}
+
+.social-links li {
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff6f61;
+}
+
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #444444;
+    color: #bbbbbb;
+}

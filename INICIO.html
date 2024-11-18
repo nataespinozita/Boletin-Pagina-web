@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletín Digital - Nivel Secundario</title>
+    <link rel="stylesheet" href="INICIO.css">
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <header>
+        <div class="logo-container">
+            <img src="/BOLETIN/LOGO2-fotor-20241110171940.png" alt="Logo de la Institución" class="logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <!-- Cambiar href para redirigir al login -->
+                <li><a href="LOGIN.html">Acceder</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección principal con imagen y título -->
+    <main>
+        <section class="main-content">
+            <div class="title-container">
+                <h1>Boletín - Nivel Secundario</h1>
+            </div>
+        </section>
+        
+        <!-- Sección de texto con imagen de fondo -->
+        <section class="texto-con-fondo">
+        </section>
+    </main>
+
+    <!-- Pie de página con enlaces -->
+    <footer>
+        <!-- Contenedor general del footer -->
+        <div class="footer-container">
+            <!-- Sección de información del colegio -->
+            <div class="footer-column">
+                <h3>Colegio Provincial Ernesto Guevara</h3>
+                <p>Dirección: Río Candelaria 3460, V9420 Río Grande, Tierra del Fuego</p>
+                <p>Teléfono: (+54) 2964 30-0532</p>
+                <p>Email: cpdeguevara.sec@tdf.edu.ar</p>
+            </div>
+    
+            <!-- Sección de enlaces rápidos -->
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Calendario Académico</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <!-- Sección de recursos para estudiantes -->
+            <div class="footer-column">
+                <h3>Recursos para Estudiantes</h3>
+                <ul>
+                    <li><a href="#">Portal Estudiantil</a></li>
+                    <li><a href="#">Biblioteca Virtual</a></li>
+                    <li><a href="#">Ayuda y Soporte</a></li>
+                </ul>
+            </div>
+    
+            <!-- Sección de redes sociales -->
+            <div class="footer-column">
+                <h3>Síguenos</h3>
+                <ul class="social-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Sección de derechos de autor -->
+        <div class="copyright">
+            <p>&copy; 2024 Colegio Provincial Ernesto Guevara. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para la barra desplegable -->
+    <script>
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY) {
+                header.classList.add('hidden');
+            } else {
+                header.classList.remove('hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
+</body>
+</html>

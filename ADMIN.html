@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Gestión de Usuarios</title>
+    <link rel="stylesheet" href="ADMIN.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="/BOLETIN/LOGO2-fotor-20241110171940.png" alt="Logo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#manage-users">Gestionar Usuarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Gestión de Usuarios</h1>
+        
+        <!-- Formulario para agregar nuevo usuario -->
+        <h2>Agregar Nuevo Usuario</h2>
+        <form id="add-user-form">
+            <input type="text" id="new-user-name" placeholder="Nombre" required />
+            <select id="new-user-role">
+                <option value="Alumno">Alumno</option>
+                <option value="Coordinación">Coordinación</option>
+            </select>
+            <select id="new-user-course">
+                <option value="7mo3ra">7mo3ra</option>
+                <option value="7mo2da">7mo2da</option>
+                <option value="7mo1ra">7mo1ra</option>
+            </select>
+            <button type="submit">Agregar Usuario</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Rol</th>
+                    <th>Curso</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="user-list">
+                <!-- Los usuarios se agregarán dinámicamente aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; Colegio Dr Ernesto Guevara. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
